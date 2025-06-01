@@ -5,7 +5,7 @@ import {
   FaComments, FaBrain, FaClipboardList, FaChartBar, FaCode, FaRobot, FaMicrochip, FaCloud, FaCogs, FaDatabase
 } from 'react-icons/fa';
 import { SiMongodb, SiExpress, SiTailwindcss } from 'react-icons/si';
-
+import HomeBG from '../assets/HomeBG.png'; // Adjust the path as necessary
 const Skill = () => {
   const [fade, setFade] = useState(false);
   useEffect(() => {
@@ -21,7 +21,7 @@ const Skill = () => {
       <div className="font-sans">
         <section className="relative py-24 bg-gradient-to-b from-[#290931] to-[#12031e] overflow-hidden">
           <div className="absolute inset-0">
-            <img src="../src/assets/HomeBG.png" loading="lazy" alt="Decorative foreground" />
+            <img src={HomeBG} loading="lazy" alt="Decorative foreground" />
             <div
               className="absolute inset-0 opacity-5"
               style={{
