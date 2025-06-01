@@ -80,7 +80,17 @@ export default function Footer() {
             <h3 className="text-2xl font-semibold bg-gradient-to-r from-black via-[#fffcfc] to-black bg-clip-text text-transparent">
               Send Me a Message
             </h3>
-            <form className="space-y-4">
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                const email = e.target.email.value;
+                const message = e.target.message.value;
+                const whatsappMessage = `Hello, I'm contacting you from your portfolio.\n\nEmail: ${email}\nMessage: ${message}`;
+                const whatsappUrl = `https://wa.me/919368015556?text=${encodeURIComponent(whatsappMessage)}`;
+                window.open(whatsappUrl, "_blank");
+              }}
+              className="space-y-4"
+            >
               <input
                 type="email"
                 name="email"
