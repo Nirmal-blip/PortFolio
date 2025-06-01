@@ -12,6 +12,7 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           <img
             src={BG}
+            loading="lazy"
             alt="Decorative background"
             className="w-full h-full object-cover "
           />
@@ -44,6 +45,7 @@ export default function Home() {
             <div className="flex justify-center">
               <img
                 src={MyImage}
+                loading="lazy"
                 alt="Nirmal Joshi"
                 className="lg:w-[380px] lg:h-[380px] md:w-80 md:h-80 w-[250px] h-[250px] rounded-full object-cover border-4 border-[#a55aa5] shadow-2xl shadow-black hover:shadow-white md:transition-all md:duration-500 md:ease-in-out md:hover:w-[400px] md:hover:h-[400px]"
               />

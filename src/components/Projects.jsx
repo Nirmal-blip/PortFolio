@@ -90,6 +90,7 @@ export default function Projects() {
         {/* Left Image */}
         <img
           src={ProjectLeft}
+          loading='lazy'
           alt="Left Decorative"
           className="w-[250px] "
           style={{ userSelect: 'none' }}
@@ -97,6 +98,7 @@ export default function Projects() {
         {/* Center Image */}
         <img
           src={Project}
+          loading="lazy"
           alt="Center Decorative"
           className="md:w-[700px] w-[400px] md:ml-0 ml-20"
           style={{ userSelect: 'none' }}
@@ -104,6 +106,7 @@ export default function Projects() {
         {/* Right Image */}
         <img
           src={ProjectRight}
+          loading="lazy"
           alt="Right Decorative"
           className="w-[250px]"
           style={{ userSelect: 'none' }}
@@ -131,6 +134,7 @@ export default function Projects() {
               <img
                 src={project.image}
                 alt={project.title}
+                loading="lazy"
                 className=" rounded-md w-full md:h-56 h-30  object-cover mb-4"
               />
               <h2 className="md:text-4xl  text-2xl font-bold mb-2 bg-gradient-to-tr from-[#070707] via-[#a7a1a1] to-[#ffff] bg-clip-text text-transparent hover:text-white">{project.title}</h2>

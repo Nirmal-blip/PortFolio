@@ -21,7 +21,7 @@ const Skill = () => {
       <div className="font-sans">
         <section className="relative py-24 bg-gradient-to-b from-[#290931] to-[#12031e] overflow-hidden">
           <div className="absolute inset-0">
-            <img src="../src/assets/HomeBG.png" alt="Decorative foreground" />
+            <img src="../src/assets/HomeBG.png" loading="lazy" alt="Decorative foreground" />
             <div
               className="absolute inset-0 opacity-5"
               style={{
