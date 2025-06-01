@@ -83,7 +83,7 @@ export default function Footer() {
             <form
               onSubmit={(e) => {
                 e.preventDefault();
-                const email = e.target.email.value;
+                const name = e.target.name.value;
                 const message = e.target.message.value;
                 const whatsappMessage = `Hello, I'm contacting you from your portfolio.\n\nEmail: ${email}\nMessage: ${message}`;
                 const whatsappUrl = `https://wa.me/919368015556?text=${encodeURIComponent(whatsappMessage)}`;
