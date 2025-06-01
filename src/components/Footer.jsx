@@ -85,9 +85,9 @@ export default function Footer() {
                 e.preventDefault();
                 const email = e.target.email.value;
                 const message = e.target.message.value;
-                const whatsappMessage = `Hello, I'm contacting you from your portfolio.\n\nEmail: ${email}\nMessage: ${message}`;
-                const whatsappUrl = `https://wa.me/919368015556?text=${encodeURIComponent(whatsappMessage)}`;
-                window.open(whatsappUrl, "_blank");
+               const mailtoLink = `mailto:nirmaljoshi123456789@gmail.com?subject=Portfolio Inquiry&body=From: ${email}%0D%0A%0D%0A${encodeURIComponent(message)}`;
+              window.open(mailtoLink, "_blank");
+
               }}
               className="space-y-4"
             >
