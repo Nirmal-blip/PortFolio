@@ -20,8 +20,17 @@ const Skill = () => {
 
       <div className="font-sans">
         <section className="relative py-24 bg-gradient-to-b from-[#290931] to-[#12031e] overflow-hidden">
-          <div className="absolute inset-0">
-            <img src={HomeBG} loading="lazy" alt="Decorative foreground" />
+
+        {/* Background Image Layer */}
+              <div className="absolute inset-0 z-0">
+                <img
+                  src={HomeBG}
+                  loading="lazy"
+                  alt="Decorative background"
+                  className="w-full h-full object-cover "
+                />
+              </div>
+              
             <div
               className="absolute inset-0 opacity-5"
               style={{
@@ -37,8 +46,7 @@ const Skill = () => {
             <div className="absolute top-0 left-0 w-[800px] h-[800px] bg-blue-500/5 rounded-full blur-[150px] animate-pulse-slow" />
             <div className="absolute bottom-0 right-0 w-[800px] h-[800px] bg-purple-500/5 rounded-full blur-[150px] animate-pulse-slow delay-700" />
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-indigo-500/5 rounded-full blur-[130px] animate-pulse-slow delay-300" />
-          </div>
-
+          
           <div className="container mx-auto text-center px-4 relative z-10">
             <div className="relative mb-20">
               <h2 className="md:text-8xl text-6xl font-bold bg-gradient-to-r from-indigo-300 via-purple-100 to-white md:pb-10 pb-3 bg-clip-text text-transparent">
