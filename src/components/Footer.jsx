@@ -92,9 +92,9 @@ export default function Footer() {
               className="space-y-4"
             >
               <input
-                type="email"
-                name="email"
-                placeholder="Your Email"
+                type="name"
+                name="name"
+                placeholder="Your Name"
                 className="w-full px-6 py-3 rounded-lg bg-gray-900/60 text-gray-300 border border-gray-700 placeholder-gray-500 focus:ring-2 focus:ring-blue-500 focus:border-transparent backdrop-blur-xl transition duration-300 text-lg"
                 required
               />
