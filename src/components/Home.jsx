@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import MyImage from '../assets/Nirmal.png';
-import BG from '../assets/HOMEBG.png';
+import BG from '../assets/HomeBG.png';
 
 export default function Home() {
   return (
