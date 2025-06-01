@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import MyImage from '../assets/Nirmal.png';
 import BG from '../assets/HomeBG.png';
+import Typewriter from 'typewriter-effect';
 
 export default function Home() {
   return (
@@ -47,7 +48,8 @@ export default function Home() {
                 src={MyImage}
                 loading="lazy"
                 alt="Nirmal Joshi"
-                className="lg:w-[380px] lg:h-[380px] md:w-80 md:h-80 w-[250px] h-[250px] rounded-full object-cover border-4 border-[#a55aa5] shadow-2xl shadow-black hover:shadow-white md:transition-all md:duration-500 md:ease-in-out md:hover:w-[400px] md:hover:h-[400px]"
+                className="lg:w-[380px] lg:h-[380px] 
+                lg:hover:w-[420px] lg:hover:h-[420px] md:w-60 md:h-60 w-[250px] h-[250px] rounded-full object-cover border-4 border-[#a55aa5] shadow-2xl shadow-black hover:shadow-white md:transition-all md:duration-500 md:ease-in-out md:hover:w-[280px] md:hover:h-[280px]"
               />
             </div>
           </div>
@@ -56,7 +58,30 @@ export default function Home() {
         {/* Decorative Bottom Block Rectangle */}
         <div className="absolute bottom-0 left-0 w-full h-10 md:h-20 bg-[#42163f] rounded-t-3xl z-20 shadow-inner shadow-[#00000066]">
           <h1 className="text-xl md:text-4xl font-extrabold bg-gradient-to-r from-[#605f5f] via-[#fffcfc] to-[#282727] bg-clip-text text-transparent hover:text-white hover:drop-shadow-4xl drop-shadow-lg text-center md:mt-4 md:pb-3">
-            Scroll Down to exciting journey
+            
+        <Typewriter
+  options={{
+    loop: true,
+    typeSpeed: 500,      // smooth + quick typing
+    deleteSpeed: 500,    // smooth + quick deleting
+     cursor: '|',    
+    delay: 5,
+  }}
+  onInit={(typewriter) => {
+    typewriter
+      .typeString('scroll down for exciting Journey')
+      .pauseFor(500)
+      .deleteAll()
+      .typeString('explore my projects')
+      .pauseFor(500)
+      .deleteAll()
+      .start();
+  }}
+/>
+
+
+
+        
           </h1>
         </div>
 

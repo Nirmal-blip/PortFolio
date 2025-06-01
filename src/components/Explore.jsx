@@ -112,7 +112,7 @@ export default function Explore() {
             <h2 className="md:text-4xl text-3xl lg-mid:text-6xl  lg-mid:block font-extrabold text-[#A020F0] drop-shadow-lg">
               To my Portfolio
             </h2>
-            <div className="w-full max-w-sm mx-auto mt-8 lg:ml-[150px] lg:hidden lg-mid:block md:text-left">
+            <div className="w-full max-w-sm mx-auto mt-8 md:text-left">
               <p className="md:text-lg text-md font-bold ml-[20px] text-[#a9a7a7] md:leading-relaxed">
                 Hi, I'm Nirmal, a full-stack developer who enjoys building web
                 apps and creating clean, user-friendly UI/UX designs.
@@ -120,15 +120,21 @@ export default function Explore() {
               
             </div>
           </div>
-               <Link 
-                to="/home" 
-                className="md:mt-[350px] mt-[280px] 
-                sm-md:mr-[180px] ml-[110px]
-                sm:mt-[350px] sm:ml-[180px]
-                lg:mr-[0px] xs:ml-[110px] bg-white hover:bg-[#1f0313] text-black md:text-xl text-md hover:border-white hover:border-2 hover:text-white md:px-10 md:py-4  px-6 py-3 rounded-full font-semibold transition-colors md:ml-[200px] inline-block"
-              >
-                Explore →
-              </Link>
+        <div className="flex flex-wrap gap-6 justify-center ml-[25%]  md:mt-[350px] sm:mt-[350px]   mt-[280px]">
+  <Link 
+    to="/home"
+    className="bg-white hover:bg-[#1f0313] text-black lg-mid:text-xl md-mid:text-lg text-md hover:border-white hover:border-2 hover:text-white lg-mid:px-10 md:py-4 px-6 py-3 rounded-full font-semibold transition-colors inline-block"
+  >
+    Explore →
+  </Link>
+  <Link 
+    to="/projects"
+    className="bg-white hover:bg-[#1f0313] text-black lg-mid:text-xl md-mid:text-lg text-md hover:border-white hover:border-2 hover:text-white lg-mid:px-10 md:py-4 px-6 py-3 rounded-full font-semibold transition-colors inline-block"
+  >
+ My Projects → 
+  </Link>
+</div>
+
           {/* Glowing Figure and Shadow - hidden on small screens */}
           <div className="absolute bottom-0 left-1 transform -translate-x-1/2 w-[550px] h-auto flex-col items-center justify-end pointer-events-none select-none lg:flex md:flex sm:flex ">
             {/* Glowing shadow background */}

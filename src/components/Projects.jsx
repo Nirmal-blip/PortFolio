@@ -5,7 +5,7 @@ import ProjectRight from '../assets/Group 24.png';
 import project1 from '../assets/Project.png';
 import project2 from '../assets/Project.png';
 import project3 from '../assets/Project.png';
-
+//import BG from "../assets/Stars.png"; // Adjust the path as necessary
 const projects = [
   {
     title: "AI Chatbot",
@@ -85,6 +85,30 @@ export default function Projects() {
   return (
     <div className="flex flex-col md:min-h-[150vh] min-h-screen text-white relative overflow-hidden bg-gradient-to-br to-[#0D1B2A] via-[#2A1A40] from-[#4A1538] items-center pt-32 pb-32 px-4 ">
 
+     {/* Futuristic animated background */}
+  <div className="absolute inset-0">
+    {/* Animated gradient mesh */}
+    <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(50,50,255,0.1),rgba(0,0,0,0))] animate-[pulse_4s_ease-in-out_infinite]" />
+    
+    {/* Hexagonal grid pattern */}
+    <div 
+      className="absolute inset-0 opacity-20"
+      style={{
+        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l25.98 15v30L30 60 4.02 45V15z' fill-opacity='0.6' fill='%234A5568'/%3E%3C/svg%3E")`,
+        backgroundSize: '60px 60px',
+      }}
+    />
+     
+    {/* Animated scan lines */}
+    <div 
+      className="absolute inset-0 bg-repeat-y opacity-5"
+      style={{
+        backgroundImage: 'linear-gradient(0deg, transparent 0%, transparent 49%, rgba(255,255,255,.1) 50%, transparent 51%, transparent 100%)',
+        backgroundSize: '100% 4px',
+        animation: 'scanlines 1s linear infinite',
+      }}
+    />
+  </div>
       {/* Top Images Container */}
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 md:mt-20  flex items-center space-x-12 pointer-events-none z-8 w-[900px] justify-center">
         {/* Left Image */}
@@ -108,8 +132,10 @@ export default function Projects() {
           src={ProjectRight}
           loading="lazy"
           alt="Right Decorative"
-          className="w-[250px]"
-          style={{ userSelect: 'none' }}
+          className="w-[250px] rounded-full hover:shadow-white hover:shadow-2xl shadow-black shadow-2xl"
+          style={{ userSelect: 'none',
+           }}
+          
         />
       </div>
 
