@@ -85,7 +85,7 @@ export default function Footer() {
                 e.preventDefault();
                 const name = e.target.name.value;
                 const message = e.target.message.value;
-                const whatsappMessage = `Hello, I'm contacting you from your portfolio.\n\n: ${name}\nMessage: ${message}`;
+                const whatsappMessage = `Hello, I'm contacting you from your portfolio Nirmal.\n\nName: ${name}\nMessage: ${message}`;
                 const whatsappUrl = `https://wa.me/919368015556?text=${encodeURIComponent(whatsappMessage)}`;
                 window.open(whatsappUrl, "_blank");
               }}
