@@ -41,10 +41,10 @@ const Skill = () => {
 
           <div className="container mx-auto text-center px-4 relative z-10">
             <div className="relative mb-20">
-              <h2 className="text-8xl font-bold bg-gradient-to-r from-indigo-300 via-purple-100 to-white pb-10 bg-clip-text text-transparent">
+              <h2 className="md:text-8xl text-6xl font-bold bg-gradient-to-r from-indigo-300 via-purple-100 to-white md:pb-10 pb-3 bg-clip-text text-transparent">
                 My Skills
               </h2>
-              <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-white via-purple-400 to-indigo-500 rounded-full" />
+              <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 md:w-24 md:h-1 w-20 h-1 bg-gradient-to-r from-white via-purple-400 to-indigo-500 rounded-full" />
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
@@ -117,7 +117,10 @@ const Skill = () => {
               animation: pulse-slow 6s ease-in-out infinite;
             }
           `}</style>
+           {/* Decorative Bottom Block Rectangle */}
+<div className="absolute bottom-0 left-0 w-full lg:h-20 h-14 bg-[#20041e] rounded-t-3xl z-0 shadow-inner shadow-[#00000066]" />
         </section>
+        
       </div>
     </>
   );

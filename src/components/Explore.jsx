@@ -31,7 +31,7 @@ export default function Explore() {
       <div className="flex flex-1 items-center justify-between py-12 px-6 lg:px-16 gap-8">
         
         {/* Left Section - Cards Buttons and Cards */}
-        <div className="w-full lg:w-1/4 pr-0 lg:pr-12 border-r border-dashed border-gray-600 flex-col hidden lg-mid:block gap-6 mb-20">
+        <div className="w-full lg:w-1/4 pr-0 lg:pr-12 border-r border-dashed border-gray-600 flex-col hidden lg:block gap-6 mb-20">
       
           {/* Buttons */}
           <div className="flex flex-col gap-4 mb-6">
@@ -103,14 +103,16 @@ export default function Explore() {
         <div className="w-full lg:w-1/2 flex flex-col items-center  relative h-[400px] sm:h-[500px] md:h-[600px]">
 
           {/* Welcome Text - always visible */}
-          <div className="absolute mt-[120px] lg-mid:ml-[900px] lg:ml-[1200px] md:ml-[1000px] sm:ml-[800px] ml-[500px] transform -translate-x-1/2 -translate-y-1/2 text-center z-20 w-full px-4 lg:px-0  ">
-            <h1 className="md:text-8xl sm:text-8xl text-7xl lg-mid:text-9xl bg-gradient-to-r from-[#605f5f] via-[#fffcfc] to-[#282727] bg-clip-text  text-transparent font-extrabold drop-shadow-lg mb-2">
-              Welcome
-            </h1>
-            <h2 className="md:text-4xl text-3xl lg:text-6xl font-extrabold text-[#A020F0] drop-shadow-lg">
+          <div className="absolute md:mt-[180px] lg:mt-[120px] sm:mt-[180px] mt-[120px] lg-mid:ml-[900px]  md:ml-[1000px] lg:ml-[700px] sm:ml-[800px] ml-[500px] transform -translate-x-1/2 -translate-y-1/2 text-center z-20 w-full px-4 lg:px-0  ">
+           
+            <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-7xl lg-mid:text-8xl bg-gradient-to-r from-[#605f5f] via-[#fffcfc] to-[#282727] bg-clip-text  lg-mid:block text-transparent font-extrabold drop-shadow-lg mb-2">
+           Welcome
+         </h1>
+
+            <h2 className="md:text-4xl text-3xl lg-mid:text-6xl  lg-mid:block font-extrabold text-[#A020F0] drop-shadow-lg">
               To my Portfolio
             </h2>
-            <div className="w-full max-w-sm mx-auto mt-8 lg:ml-[150px] md:text-left">
+            <div className="w-full max-w-sm mx-auto mt-8 lg:ml-[150px] lg:hidden lg-mid:block md:text-left">
               <p className="md:text-lg text-md font-bold ml-[20px] text-[#a9a7a7] md:leading-relaxed">
                 Hi, I'm Nirmal, a full-stack developer who enjoys building web
                 apps and creating clean, user-friendly UI/UX designs.
@@ -120,7 +122,10 @@ export default function Explore() {
           </div>
                <Link 
                 to="/home" 
-                className="md:mt-[350px] mt-[280px] bg-white hover:bg-[#1f0313] text-black md:text-xl text-md hover:border-white hover:border-2 hover:text-white md:px-10 md:py-4  px-6 py-3 rounded-full font-semibold transition-colors lg:ml-[200px] inline-block"
+                className="md:mt-[350px] mt-[280px] 
+                sm-md:mr-[180px]
+                sm:mt-[350px] sm:ml-[180px]
+                lg:mr-[0px] xs:ml-[110px] bg-white hover:bg-[#1f0313] text-black md:text-xl text-md hover:border-white hover:border-2 hover:text-white md:px-10 md:py-4  px-6 py-3 rounded-full font-semibold transition-colors md:ml-[200px] inline-block"
               >
                 Explore →
               </Link>
@@ -136,10 +141,35 @@ export default function Explore() {
             />
           </div>
         </div>
+        
+      </div>
+       
+       {/* ABOUT ME for mobile */}
+      <div className="block lg:hidden w-full px-6 ">
+        <h1 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ff9a9e] via-[#fad0c4]  to-[#fad0c4] mb-6">ABOUT ME</h1>
+        <div className="flex flex-col gap-4 mb-[100px]">
+          <button onClick={() => setActiveCard(activeCard === "hobbies" ? null : "hobbies")} className={`p-4 rounded-2xl border border-white/30 font-semibold text-lg ${activeCard === "hobbies" ? "bg-[#1f0313] border-white border-2 text-white" : "hover:bg-[#6c0b42] hover:text-white bg-white text-black"} transition`}>Hobbies</button>
+          <button onClick={() => setActiveCard(activeCard === "skills" ? null : "skills")} className={`p-4 rounded-2xl border border-white/30 font-semibold text-lg ${activeCard === "skills" ? "bg-[#1f0313] border-white border-2 text-white" : "bg-white hover:bg-[#6c0b42] hover:text-white text-black"} transition`}>Skills</button>
+          <button onClick={() => setActiveCard(activeCard === "tools" ? null : "tools")} className={`p-4 rounded-2xl border border-white/30 font-semibold text-lg ${activeCard === "tools" ? "bg-[#1f0313] border-white border-2 text-white" : "bg-white hover:bg-[#6c0b42] hover:text-white text-black"} transition`}>Tools I Use</button>
+
+          {activeCard === "hobbies" && <Card title="Hobbies" items={["Designing", "UI/UX Design", "Portrait Art"]} />}
+          {activeCard === "skills" && <Card title="Skills" items={["Full-Stack Development", "React & Tailwind CSS", "Node.js & Express", "MongoDB"]} />}
+          {activeCard === "tools" && <Card title="Tools I Use" items={["Figma", "VS Code", "GitHub", "Cursor", "Postman"]} />}
+        </div>
       </div>
       {/* Decorative Bottom Block Rectangle */}
-<div className="absolute bottom-0 left-0 w-full lg:h-20 h-14 bg-[#20041e] rounded-t-3xl z-0 shadow-inner shadow-[#00000066]" />
+<div className="absolute bottom-0 left-0 w-full  lg:h-20 h-14 bg-[#20041e] rounded-t-3xl z-0 shadow-inner shadow-[#00000066]" />
 
+    </div>
+  );
+}
+function Card({ title, items }) {
+  return (
+    <div className="bg-[#441041]/60 backdrop-blur-lg rounded-2xl p-6 border border-white/20 shadow-lg transition-transform duration-300 ease-in-out mt-4">
+      <h2 className="text-xl font-semibold mb-3 text-white">{title}</h2>
+      <ul className="list-disc pl-4 text-[#D1D5DB] space-y-1">
+        {items.map((item, index) => <li key={index}>{item}</li>)}
+      </ul>
     </div>
   );
 }

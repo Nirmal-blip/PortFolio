@@ -6,7 +6,7 @@ import BG from '../assets/HomeBG.png';
 export default function Home() {
   return (
     <>
-      <div className="relative flex flex-col min-h-screen text-white overflow-hidden font-poppins">
+      <div className="relative flex flex-col md:min-h-screen min-h-[120vh] text-white overflow-hidden font-poppins">
 
         {/* Background Image Layer */}
         <div className="absolute inset-0 z-0">
@@ -23,14 +23,14 @@ export default function Home() {
             
             {/* Left - Heading */}
             <div className="text-center md:text-left space-y-4">
-              <h1 className="text-4xl lg:text-6xl md:text-5xl font-extrabold tracking-tight leading-tight bg-gradient-to-r from-[#ffffff] via-[#f0a6ca] to-white bg-clip-text text-transparent ml-[10%] md:mb-[5%]">
+              <h1 className="text-4xl lg:text-6xl md:text-5xl font-extrabold tracking-tight leading-tight bg-gradient-to-r from-[#ffffff] via-[#f0a6ca] to-white bg-clip-text text-transparent md:ml-[10%] md:mt-0 md:mb-[5%]">
                 Let’s get to know<br /> about me closer
               </h1>
-              <p className="text-gray-300 ml-[10%] max-w-md text-xl font-semibold leading-relaxed tracking-wide pb-[8%]">
+              <p className="text-gray-300 md:ml-[10%] max-w-md text-xl font-semibold leading-relaxed tracking-wide pb-[8%]">
                 Discover who I am, what I do, and the passion that drives my creativity and code.
               </p>
 
-              <div className="mt-6 ml-[10%]">
+              <div className="mt-6 md:ml-[10%]">
                 <Link 
                   to="/home" 
                   className="bg-white hover:bg-[#1f0313] text-black text-md hover:border-white hover:border-2 hover:text-white px-6 py-3 rounded-full font-semibold transition-colors duration-300 inline-block"
