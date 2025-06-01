@@ -123,7 +123,7 @@ export default function Explore() {
                <Link 
                 to="/home" 
                 className="md:mt-[350px] mt-[280px] 
-                sm-md:mr-[180px]
+                sm-md:mr-[180px] ml-[110px]
                 sm:mt-[350px] sm:ml-[180px]
                 lg:mr-[0px] xs:ml-[110px] bg-white hover:bg-[#1f0313] text-black md:text-xl text-md hover:border-white hover:border-2 hover:text-white md:px-10 md:py-4  px-6 py-3 rounded-full font-semibold transition-colors md:ml-[200px] inline-block"
               >
