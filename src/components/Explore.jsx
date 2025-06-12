@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import glowingFigure from "../assets/glow.png";
 import { Link } from "react-router-dom";
-import wavy from '/wavy4.gif';
+import butterfly from '/croped.gif';
 export default function Explore() {
   const [activeCard, setActiveCard] = useState(null);
 
@@ -103,33 +103,33 @@ export default function Explore() {
         <div className="w-full lg:w-1/2 flex flex-col items-center  relative h-[400px] sm:h-[500px] md:h-[600px]">
 
           {/* Welcome Text - always visible */}
-          <div className="absolute md:mt-[180px] lg:mt-[120px] sm:mt-[180px] mt-[120px] lg-mid:ml-[900px]  md:ml-[1000px] lg:ml-[700px] sm:ml-[800px] ml-[500px] transform -translate-x-1/2 -translate-y-1/2 text-center z-20 w-full px-4 lg:px-0  ">
+          <div className="absolute md:mt-[180px] lg:mt-[120px] sm:mt-[180px] mt-[140px] lg-mid:ml-[900px]  md:ml-[1000px] lg:ml-[700px] sm:ml-[800px] sm-mid:ml-[700px] xs:ml-[640px] xss:ml-[400px] ml-[340px] transform -translate-x-1/2 -translate-y-1/2 text-center z-20 w-full px-4 lg:px-0  ">
            
-            <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-7xl lg-mid:text-8xl bg-gradient-to-r from-[#605f5f] via-[#fffcfc] to-[#282727] bg-clip-text  lg-mid:block text-transparent font-extrabold drop-shadow-lg mb-2">
+            <h1 className="text-5xl sm:text-6xl md-mid:text-8xl lg:text-7xl lg-mid:ml-[70px] lg:lg-mid:text-8xl  sm-mid:text-7xl  bg-gradient-to-r from-[#605f5f] via-[#fffcfc] to-[#282727] bg-clip-text  lg-mid:block md:ml-[10px] text-transparent font-extrabold drop-shadow-lg mb-2">
            Welcome
          </h1>
 
-            <h2 className="md:text-4xl text-3xl lg-mid:text-6xl  lg-mid:block font-extrabold text-[#A020F0] drop-shadow-lg">
+            <h2 className="md:text-4xl text-3xl lg-mid:text-6xl  lg-mid:ml-[70px] lg-mid:block font-extrabold text-[#A020F0] drop-shadow-lg">
               To my Portfolio
             </h2>
-            <div className="w-full max-w-sm mx-auto mt-8 md:text-left">
-              <p className="md:text-lg text-md font-bold ml-[20px] text-[#a9a7a7] md:leading-relaxed">
+            <div className="w-full xs:max-w-sm xss:max-w-[200px]  mx-auto mt-8 md:text-left">
+              <p className="md:text-lg xs:text-md font-bold xs:ml-[20px] lg-mid:ml-[30px] text-[#a9a7a7] md:leading-relaxed xss:ml-[-30px] text-xs ">
                 Hi, I'm Nirmal, a full-stack developer who enjoys building web
                 apps and creating clean, user-friendly UI/UX designs.
               </p>
               
             </div>
           </div>
-        <div className="flex flex-wrap gap-6 justify-center ml-[25%]  md:mt-[350px] sm:mt-[350px]   mt-[280px]">
+        <div className="flex flex-wrap gap-6 justify-center ml-[35%]  md:mt-[350px] sm:mt-[350px]   mt-[280px]">
   <Link 
     to="/home"
-    className="bg-white hover:bg-[#1f0313] text-black lg-mid:text-xl md-mid:text-lg text-md hover:border-white hover:border-2 hover:text-white lg-mid:px-10 md:py-4 px-6 py-3 rounded-full font-semibold transition-colors inline-block"
+    className="bg-white hover:bg-[#1f0313] text-black lg-mid:text-xl md-mid:text-lg xs:text-base xss:text-xs hover:border-white hover:border-2 hover:text-white lg-mid:px-10 md:py-4 xs:px-6 xs:py-3  xss:px-3 xss:py-3 rounded-full font-semibold transition-colors inline-block"
   >
     Explore →
   </Link>
   <Link 
     to="/projects"
-    className="bg-white hover:bg-[#1f0313] text-black lg-mid:text-xl md-mid:text-lg text-md hover:border-white hover:border-2 hover:text-white lg-mid:px-10 md:py-4 px-6 py-3 rounded-full font-semibold transition-colors inline-block"
+    className="bg-white hover:bg-[#1f0313] text-black lg-mid:text-xl md-mid:text-lg xs:text-base xss:text-xs   hover:border-white hover:border-2 hover:text-white lg-mid:px-10 md:py-4 xs:px-6 xs:py-3  xss:px-3 xss:py-3  rounded-full font-semibold transition-colors inline-block"
   >
  My Projects → 
   </Link>
@@ -140,16 +140,16 @@ export default function Explore() {
             {/* Glowing shadow background */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-full bg-black opacity-[80%] blur-[120px] pointer-events-none z-10 rounded-full" />
             {/* Glowing Figure */}
-           <div className="relative">
-  <img
-    src={wavy}
-    alt="Wavy Background"
-    className="absolute hidden lg:block top-0 left-0 z-10 lg:w-[600px] lg:h-[800px] w-[80%] h-[70%] md:w-full md:h-1/2 object-contain"
+           <div className="relative mr-10">
+   <img
+    src={butterfly}
+    alt="Butterfly"
+    className="absolute top-[30px] lg:ml-36 left-1/2 -translate-x-1/2 md-big:w-[250px] md-big:mt-[40px] lg-mid:w-[280px] lg-mid:mt-[0] md:w-[250px] md:mt-[90px] md:ml-[170px]  ml-[60px] mt-[10px] w-[100px] object-contain z-10 lg:block rotate-[340deg] xs:w-[180px] xs:ml-[200px] xs:mt-[-80px] "
   />
   <img
     src={glowingFigure}
     alt="Glowing Figure"
-    className=" relative z-20 lg:w-[600px] lg:h-[800px] w-[80%] h-[70%] md:w-full md:h-1/2 object-contain"
+    className=" relative z-20 lg:w-[600px] lg:h-[800px] w-[80%] h-[70%] md-big:w-full md:w-[600px] md:h-[800px] md-big:h-1/2 xs:w-[640px] xs:h-[600px] xs:mt-[-80px] md:mt-[0] md:ml-[0] xs:ml-[40px] object-contain "
   />
 </div>
 

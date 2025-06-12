@@ -12,10 +12,12 @@ export default {
         playfair: ['Playfair Display', 'serif'],
       },
        screens: {
-        'lg-mid': '1400px',     // Custom point in between lg and xl
+        'lg-mid': '1400px',
+        'md-big':'1000px',     // Custom point in between lg and xl
         'md-mid': '720px',     // Custom point in between md and lg
-        'sm-mid': '640px',      // Custom point in between sm and md
+        'sm-mid': '630px',      // Custom point in between sm and md
         'xs': '480px',          // Custom point for extra small screens
+        'xss':'200px',         // Custom point for extra extra small screens
       },
       animation: {
         'twinkling': 'twinkling 3s linear infinite',
