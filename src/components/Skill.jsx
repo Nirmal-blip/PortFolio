@@ -126,7 +126,7 @@ const Skill = () => {
             }
           `}</style>
            {/* Decorative Bottom Block Rectangle */}
-<div className="absolute bottom-0 left-0 w-full lg:h-20 h-14 bg-[#20041e] rounded-t-3xl z-0 shadow-inner shadow-[#00000066]" />
+<div className="absolute bottom-0  left-0 w-full lg:h-20 h-14 bg-[#20041e] rounded-t-3xl z-0 shadow-inner shadow-[#00000066]" />
         </section>
         
       </div>

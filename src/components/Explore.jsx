@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import glowingFigure from "../assets/glow.png";
 import { Link } from "react-router-dom";
-
+import wavy from '/wavy4.gif';
 export default function Explore() {
   const [activeCard, setActiveCard] = useState(null);
 
@@ -140,11 +140,19 @@ export default function Explore() {
             {/* Glowing shadow background */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-full bg-black opacity-[80%] blur-[120px] pointer-events-none z-10 rounded-full" />
             {/* Glowing Figure */}
-            <img
-              src={glowingFigure}
-              alt="Glowing Figure"
-              className="relative z-20 lg:w-[600px] lg:h-[800px] w-[80%] h-[70%] md:w-full md:h-1/2 object-contain"
-            />
+           <div className="relative">
+  <img
+    src={wavy}
+    alt="Wavy Background"
+    className="absolute hidden lg:block top-0 left-0 z-10 lg:w-[600px] lg:h-[800px] w-[80%] h-[70%] md:w-full md:h-1/2 object-contain"
+  />
+  <img
+    src={glowingFigure}
+    alt="Glowing Figure"
+    className=" relative z-20 lg:w-[600px] lg:h-[800px] w-[80%] h-[70%] md:w-full md:h-1/2 object-contain"
+  />
+</div>
+
           </div>
         </div>
         
@@ -164,7 +172,7 @@ export default function Explore() {
         </div>
       </div>
       {/* Decorative Bottom Block Rectangle */}
-<div className="absolute bottom-0 left-0 w-full  lg:h-20 h-14 bg-[#20041e] rounded-t-3xl z-0 shadow-inner shadow-[#00000066]" />
+<div className="absolute bottom-0 left-0 w-full  lg:h-[115px] h-14 bg-[#20041e] rounded-t-3xl z-0 shadow-inner shadow-[#00000066]" />
 
     </div>
   );

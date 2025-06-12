@@ -5,6 +5,7 @@ import ProjectRight from '../assets/Group 24.png';
 import project1 from '../assets/Project.png';
 import project2 from '../assets/Project.png';
 import project3 from '../assets/Project.png';
+import wavy from '/wavy4.gif';
 //import BG from "../assets/Stars.png"; // Adjust the path as necessary
 const projects = [
   {
@@ -113,7 +114,7 @@ export default function Projects() {
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 md:mt-20  flex items-center space-x-12 pointer-events-none z-8 w-[900px] justify-center">
         {/* Left Image */}
         <img
-          src={ProjectLeft}
+          src={wavy}
           loading='lazy'
           alt="Left Decorative"
           className="w-[250px] "
@@ -129,10 +130,10 @@ export default function Projects() {
         />
         {/* Right Image */}
         <img
-          src={ProjectRight}
+          src={wavy}
           loading="lazy"
           alt="Right Decorative"
-          className="w-[250px] rounded-full hover:shadow-white hover:shadow-2xl shadow-black shadow-2xl"
+          className="w-[250px] "
           style={{ userSelect: 'none',
            }}
           
