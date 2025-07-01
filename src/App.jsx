@@ -12,7 +12,6 @@ import Navbar from './components/Navbar';
 import Projects from './components/Projects';
 import Skill from './components/Skill';
 function App() {
-  const [count, setCount] = useState(0);
 
   return (
     <>

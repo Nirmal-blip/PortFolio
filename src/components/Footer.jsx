@@ -1,9 +1,16 @@
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import React from 'react';
-
+import { use } from "react";
+import Navbar from "../components/Navbar"
+import {useLocation} from 'react-router-dom'
 export default function Footer() {
+  const location=useLocation();
   return (
-    <footer className="relative bg-gradient-to-b from-[#20041e] to-[#100114] text-gray-300 py-16 px-8 overflow-hidden">
+    <>
+  
+    <footer  className="relative bg-gradient-to-b from-[#20041e] to-[#100114] text-gray-300 py-16 px-8 overflow-hidden">
+
+
       {/* Cyberpunk background elements */}
       <div className="absolute inset-0">
         <div
@@ -134,5 +141,6 @@ export default function Footer() {
         }
       `}</style>
     </footer>
+    </>
   );
 }

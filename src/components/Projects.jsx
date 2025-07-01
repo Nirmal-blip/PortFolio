@@ -6,6 +6,11 @@ import project1 from '../assets/Project.png';
 import project2 from '../assets/Project.png';
 import project3 from '../assets/Project.png';
 import wavy from '/wavy4.gif';
+import {Link} from 'react-router-dom'
+import { useLocation } from 'react-router-dom';
+
+
+
 //import BG from "../assets/Stars.png"; // Adjust the path as necessary
 const projects = [
   {
@@ -26,9 +31,16 @@ const projects = [
     image: project3,
     link: "https://example.com/ecommerce",
   },
+  {
+    title: "Text Utils website",
+    description: "React and Firebase based shopping app.",
+    image: project3,
+    link: "https://example.com/ecommerce",
+  },
 ];
 
 export default function Projects() {
+  const location = useLocation();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -110,6 +122,17 @@ export default function Projects() {
       }}
     />
   </div>
+  
+  {location.pathname==='/projects' && (
+  <Link 
+  to="/" 
+  className="absolute top-6 right-6 bg-white hover:bg-[#1f0313] text-black text-md hover:border-white hover:border-2 hover:text-white px-6 py-3 rounded-md font-semibold transition-colors duration-300 z-50"
+>
+← Back
+</Link>
+)}
+
+  
       {/* Top Images Container */}
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 md:mt-20  flex items-center space-x-12 pointer-events-none z-8 w-[900px] justify-center">
         {/* Left Image */}
@@ -140,6 +163,7 @@ export default function Projects() {
         />
       </div>
 
+     
       {/* Carousel Container */}
       <div className="relative w-full md:max-w-[900px] md:h-[650px] max-w[600px] h-[550px] perspective-[1200px] md:mr-40 mr-20 md:mt-80 mt-20 z-10">
         <div className="relative w-full h-full text-2xl">
@@ -192,6 +216,7 @@ export default function Projects() {
         >
           Previous
         </button>
+       
         <button
           onClick={nextCard}
           disabled={isAnimating}

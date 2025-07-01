@@ -27,7 +27,7 @@ const Navbar = () => {
         <ul className="hidden md:flex space-x-2 items-center text-base">
           {[ 
             { href: '/', label: 'Explore', icon: <FaHome className="h-5 w-5" /> },
-            { href: '#', label: 'Contact Us', icon: <FaEnvelope className="h-5 w-5" /> },
+            { href: '/footer', label: 'Contact Me', icon: <FaEnvelope className="h-5 w-5" /> },
            
           ].map((link, idx) => (
             <li key={idx} className="group relative">
@@ -61,16 +61,16 @@ const Navbar = () => {
             {[ 
               { href: '#', label: 'Home' },
           
-              { href: '#', label: 'Contact Us' },
+              { href: '/footer', label: 'Contact Me' },
               
             ].map((link, idx) => (
               <li key={idx} className="group relative w-full">
-                <Link
-                  to={link.href}
+                <a
+                  href={link.href}
                   className="block w-full text-white/80 font-medium py-3 px-6 rounded-lg hover:bg-white/5 transition-all duration-300"
                 >
                   {link.label}
-                </Link>
+                </a>
                 <span className="absolute left-1/2 transform -translate-x-1/2 bottom-0 h-0.5 w-3/4 bg-gradient-to-r from-[#ffff] via-[#ffff] to-[#5f5e5e] scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
               </li>
             ))}
